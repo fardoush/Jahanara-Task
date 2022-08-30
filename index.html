@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FontAwesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="main-section">
+        <div class="menu-wrapper">
+            <div class="sidebar-menu">
+                <div class="logo-inner">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </div>
+                <!-- end logo-inner  -->
+                <ul class="menu-inner">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="images/dashboard.png" alt="">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="images/lockup.png" alt="">
+                            <span>Lookup</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="images/files.png" alt="">
+                            <span>Files</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item ">
+                        <div class="menu-items-drop" onclick="dropDown()">
+                            <a href="#" class="menu-link menu-link-dropdown">
+                                <img src="images/logs.png" alt="">
+                                <span>Logs</span>
+                            </a>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <!-- end menu-items-drop  -->
+
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#" class="menu-link">
+                                <img src="images/single.png" alt="">
+                                <span>Single/Bulk Lookup</span>
+                            </a>
+                            <a href="#" class="menu-link">
+                                <img src="images/daily.png" alt="">
+                                <span>Daily Usages</span>
+                            </a>
+                        </div>
+                        <!-- end dropdown-content  -->
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item"><a href="#" class="menu-link">
+                            <img src="images/buy.png" alt="">
+                            <span>Buy Credits</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item"><a href="#" class="menu-link">
+                            <img src="images/integrations.png" alt="">
+                            <span>Integrations</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <img src="images/profile.png" alt="">
+                            <!-- <i class="fa-solid fa-user"></i> -->
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <!-- end menu-item  -->
+                </ul>
+                <!-- end menu-inner  -->
+            </div>
+            <!-- end sidebar-menu  -->
+
+            <div class="main-content">
+                <div class="nav-menu">
+                    <div class="nav-menu-inner">
+                        <span class="balance"> Balance : <span class="balance-amount"> $125 </span> </span>
+
+                        <div class="nav-profile-dropdown">
+                            <div class="nav-dropdown">
+                                <!-- <ul class="profile-wrapper">
+                                <li>
+                                    <div class="profile">
+                                        <img src="images/profile.jpg" alt="" class="profile-img">
+                                        <a href="#" class="name">Alexa Jui</a>
+
+                                        <ul class="profile-dropdown-menu">
+                                            <li><a href="#">My Profile</a></li>
+                                            <li><a href="">Add Fund</a></li>
+                                            <li><a href="">API Documentation</a></li>
+                                            <li><a href="">Log Out</a></li>
+                                            <li><a href="" class="btn">Log Out</a></li>
+                                        </ul>   
+                                    </div>
+                                </li>
+                            </ul> -->
+
+                                <ul class="profile-wrapper">
+                                    <li>
+                                        <!-- user profile -->
+                                        <div class="profile" id="profile">
+                                            <div id="profileInfoContainer">
+                                                <img src="images/img1.jpg" />
+                                                <a href="#" class="name">Alexa Jui </a>
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </div>
+                                            <!-- end profileInfoContainer  -->
+                                            <!-- more menu -->
+                                            <ul class="menu" id="menu">
+                                                <li><a href="#">My Profile</a></li>
+                                                <li><a href="#">Add Fund</a></li>
+                                                <li><a href="#">API Documentation</a></li>
+                                                <li><a href="#">Log out</a></li>
+                                                <li>
+                                                    <div class="log-btn-wrap">
+                                                        <a href="#" class="logout-btn"> <i
+                                                                class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                                                            out</a>
+                                                    </div>
+                                                    <!-- end log-btn-btn  -->
+                                                </li>
+                                            </ul>
+                                            <!-- end menu  -->
+                                        </div>
+                                        <!-- end profile  -->
+                                    </li>
+                                    <!-- end li  -->
+                                </ul>
+                                <!-- end profile-wrapper  -->
+
+                            </div>
+                            <!-- end nav-dropdown  -->
+                        </div>
+                        <!-- end nav-profile-dropdown  -->
+                    </div>
+                    <!-- end nav-menu-inner  -->
+                </div>
+                <!-- end nav-menu  -->
+
+                <div class="main-content-wrapper">
+                    <div class="main-content-inner">
+                        <div class="profile-info-inner">
+                            <div class="profile-images">
+                                <img src="images/img1.jpg" alt="">
+                            </div>
+                            <!-- end profile-images  -->
+                            <div class="profile-info">
+                                <h4>Alexa Jui</h4>
+                                <span>alexajui@gmail.com</span>
+                                <span>+1 354 785 4125</span>
+                                <span>3213 D Street, Columbus, USA</span>
+                            </div>
+                            <!-- end profile-info  -->
+                        </div>
+                        <!-- end profile-info-inner  -->
+
+                        <div class="creadit-card-wrapper">
+                            <h2>Your Credit Cards</h2>
+                            <div class="creadit-card-inner">
+                                <div class="creadit-card">
+                                    <div class="delete-icon">
+                                        <i class=" fa fa-duotone fa-trash-can"></i>
+                                    </div>
+                                    <!-- delete-icon   -->
+                                    <div class="creadit-info">
+                                        <h3>Credit Card 1</h3>
+                                        <h3>xxxxxxxxxxxx4684</h3>
+                                    </div>
+                                    <!-- end creadit-info  -->
+                                </div>
+                                <!-- end creadit-card  -->
+                                <div class="creadit-card">
+                                    <div class="delete-icon">
+                                        <i class=" fa fa-duotone fa-trash-can"></i>
+                                    </div>
+                                    <!-- delete-icon   -->
+                                    <div class="creadit-info">
+                                        <h3>Credit Card 1</h3>
+                                        <h3>xxxxxxxxxxxx4684</h3>
+                                    </div>
+                                </div>
+                                <!-- end creadit-card  -->
+                                <div class="creadit-card">
+                                    <div class="delete-icon">
+                                        <i class=" fa fa-duotone fa-trash-can"></i>
+                                    </div>
+                                    <!-- delete-icon   -->
+                                    <div class="creadit-info">
+                                        <h3>Credit Card 1</h3>
+                                        <h3>xxxxxxxxxxxx4684</h3>
+                                    </div>
+                                </div>
+                                <!-- end creadit-card  -->
+                            </div>
+                            <!-- end creadit-card-inner  -->
+                        </div>
+                        <!-- end creadit-card-wrapper  -->
+                    </div>
+                    <!-- end main-content-inner  -->
+
+                    <div class="setting-wrapper">
+                        <div class="setting-inner">
+                            <div class="setting-tab">
+                                <a href="#" class="setting-tab-link setting-active"
+                                    onclick="settingTabLinks(event, 'UpdatePasswordId')">Update Profile</a>
+                                <a href="#" class="setting-tab-link"
+                                    onclick="settingTabLinks(event, 'ChangePasswordId')">Change Password</a>
+                                <a href="#" class="setting-tab-link"
+                                    onclick="settingTabLinks(event, 'emailNotificationId')">Email Notifications</a>
+                                <a href="#" class="setting-tab-link"
+                                    onclick="settingTabLinks(event, 'autoRecharge')">Auto Recharge Settings</a>
+                            </div>
+                            <!-- end setting-tab  -->
+
+                            <div id="UpdatePasswordId" class="setting-tab-content update-profile"
+                                style="display:block;">
+                                <div class="notification-wrapper">
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+                                    <!-- end email-notification-inner  -->
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+                                    <!-- end email-notification-inner  -->
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+                                    <!-- end email-notification-inner  -->
+                                    <div class="recevied-email-wrapper">
+                                        <div class="email-notification-inner">
+                                            <label class="switch">
+                                                <input type="checkbox" checked class="switchCheck">
+                                                <span class="slider-check round"> </span>
+                                            </label>
+                                            <!-- end switch  -->
+                                            <h6 class="switch-active">Notify me when list verification completes</h6>
+                                        </div>
+                                        <div class="input-field-wrapper">
+                                            <div class="input-field-inner">
+                                                <label>Send Email to <span>*</span></label>
+                                                <input class="email" type="text" placeholder="alexajui@gmail.com">
+                                            </div>
+                                            <!-- end input-field-inner  -->
+                                            <div class="input-field-inner">
+                                                <label>When credits are less than <span>*</span></label>
+                                                <input class="email" type="text" placeholder="50">
+                                            </div>
+                                            <!-- end input-field-inner  -->
+                                        </div>
+                                        <!-- end input-field-wrapper  -->
+                                    </div>
+                                    <!-- end recevied-email-wrapper  -->
+                                    <div class="button-holder">
+                                        <button class="btn">Save Changes</button>
+                                    </div>
+                                    <!-- end button-holder  -->
+                                </div>
+                                <!-- end notification-wrapper  -->
+                            </div>
+                            <!-- end setting-tab-content  -->
+                            <div id="ChangePasswordId" class="setting-tab-content change-password">
+                                <h3>Change Password</h3>
+                            </div>
+                            <!-- end changePass  -->
+                            <!-- end setting-tab-content  -->
+                            <div id="emailNotificationId" class="setting-tab-content email-notification">
+                                <div class="notification-wrapper">
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+                                    <div class="email-notification-inner">
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="switchCheck">
+                                            <span class="slider-check round"> </span>
+                                        </label>
+                                        <!-- end switch  -->
+                                        <h6 class="switch-active">Notify me when list verification completes</h6>
+                                    </div>
+
+
+                                    <div class="recevied-email-wrapper">
+                                        <div class="email-notification-inner">
+                                            <label class="switch">
+                                                <input type="checkbox" checked class="switchCheck">
+                                                <span class="slider-check round"> </span>
+                                            </label>
+                                            <!-- end switch  -->
+                                            <h6 class="switch-active">Notify me when list verification completes</h6>
+                                        </div>
+
+                                        <form action="">
+                                            <div class="input-field-wrapper">
+                                                <div class="input-field-inner">
+                                                    <label>Send Email to <span>*</span></label>
+                                                    <input class="email" type="text" placeholder="alexajui@gmail.com">
+                                                </div>
+                                                <div class="input-field-inner">
+                                                    <label>When credits are less than <span>*</span></label>
+                                                    <input class="email" type="text" placeholder="50">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!-- end form   -->
+                                    </div>
+                                    <!-- end recevied-email-wrapper  -->
+
+                                    <div class="button-holder">
+                                        <button class="btn">Save Changes</button>
+                                    </div>
+                                </div>
+                                <!-- end notification-wrapper  -->
+                            </div>
+                            <!-- end setting-tab-content  -->
+                            <div id="autoRecharge" class="setting-tab-content update-profile">
+                                <h3>Change Password</h3>
+                            </div>
+                            <!-- end setting-tab-content  -->
+                        </div>
+                        <!-- end setting-inner  -->
+                    </div>
+                    <!-- end setting-wrapper  -->
+                </div>
+                <!-- end main-content-wrapper  -->
+            </div>
+            <!-- end main-content  -->
+        </div>
+        <!--end  menu-wrapper  -->
+    </section>
+    <!-- end main-section  -->
+
+    <!-- Start Js  -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
